@@ -1,15 +1,20 @@
+--------Suckless Browsers----------------------------------------------	;exec 'myprograms'
+🥝 Min		;exec 'min'
+🏄 surf		;exec 'surf'
+🍃 Midori	;exec 'midori'
+🐺 BadWolf	;exec 'badwolf'
+--------Office and Productivity----------------------------------------------	;exec 'myprograms'
+ firefox	;cd "/home/voidme/tent/hogsmead/Softwares/home/firefox-78.0.1" && ./firefox
 🦁 brave	;exec `brave`
 📔 Libre Office	;exec '/home/voidme/tent/hogsmead/Softwares/home/LibreOffice-fresh.basic-x86_64.AppImage'
 🖌 Gimp	;exec '/home/voidme/tent/hogsmead/Softwares/home/GIMP.AppImage'
+--------Utilities and Tools----------------------------------------------	;exec 'myprograms'
 🎶 cava		;$TERMINAL -e '/home/voidme/tent/hogsmead/Softwares/Linux_Soft/Binary_Builds/cava/cava'
 🎼 vis		;$TERMINAL -e '/home/voidme/tent/hogsmead/Softwares/Linux_Soft/Binary_Builds/cli-visualizer/build/vis'
 👀 Speed Reader	;wine '/home/voidme/tent/hogsmead/Softwares/Linux_Soft/Binary_Builds/Speed Reader Enhanced Portable/Speed Reader Enhanced Portable/Speed Reader Enhanced.exe'
-💭 RIOT.IM	;exec '/home/voidme/tent/hogsmead/Softwares/home/Riot-x86_64.AppImage'
 🐧 eDEX-UI	;exec '/home/voidme/tent/hogsmead/Softwares/home/eDEX-UI.Linux.x86_64.AppImage'
 🎹 lmms		;exec '/home/voidme/tent/hogsmead/Softwares/home/lmms.AppImage'
-💭 Discord	;exec '/home/voidme/tent/hogsmead/Softwares/home/Discord'
-
-
-☠  CS:CZ	;cd '/home/voidme/.local/share/wineprefixes/default/drive_c/Program Files (x86)/Condition Zero - Xtreme Edition/' && wine 'czero.exe'
+--------Games----------------------------------------------	;exec 'myprograms'
+☠  CS:CZ	;cd '/home/voidme/.local/share/wineprefixes/default/drive_c/Program Files (x86)/Condition Zero - Xtreme Edition/' && wine 'czero.exe' ; xrandr -s 1360x768
 🤖 Xonotic	;cd '/home/voidme/tent/hogsmead/Softwares/home/Xonotic/' && ./xonotic-linux64-glx
 ⛑ Delta Force 2	;cd '/home/voidme/tent/hogwarts/Games/Delta 2/DeltaF_2/' && wine Df2.exe
