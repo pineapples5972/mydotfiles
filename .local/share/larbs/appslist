@@ -9,6 +9,7 @@
 📔 Libre Office	;exec '/home/voidme/tent/hogsmead/Softwares/home/LibreOffice-fresh.basic-x86_64.AppImage'
 🖌 Gimp	;exec '/home/voidme/tent/hogsmead/Softwares/home/GIMP.AppImage'
 --------Utilities and Tools----------------------------------------------	;exec 'myprograms'
+ Etcher 	;cd '/home/voidme/tent/hogsmead/Softwares/Linux_Soft/Binary_Builds/balena-etcher' && ./balenaEtcher-1.5.100-x64.AppImage
 🎶 cava		;$TERMINAL -e '/home/voidme/tent/hogsmead/Softwares/Linux_Soft/Binary_Builds/cava/cava'
 🎼 vis		;$TERMINAL -e '/home/voidme/tent/hogsmead/Softwares/Linux_Soft/Binary_Builds/cli-visualizer/build/vis'
 👀 Speed Reader	;wine '/home/voidme/tent/hogsmead/Softwares/Linux_Soft/Binary_Builds/Speed Reader Enhanced Portable/Speed Reader Enhanced Portable/Speed Reader Enhanced.exe'
