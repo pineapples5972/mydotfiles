@@ -19,3 +19,4 @@
 ☠  CS:CZ	;cd '/home/voidme/.local/share/wineprefixes/default/drive_c/Program Files (x86)/Condition Zero - Xtreme Edition/' && wine 'czero.exe' ; xrandr -s 1360x768
 🤖 Xonotic	;cd '/home/voidme/tent/hogsmead/Softwares/home/Xonotic/' && ./xonotic-linux64-glx
 ⛑ Delta Force 2	;cd '/home/voidme/tent/hogwarts/Games/Delta 2/DeltaF_2/' && wine Df2.exe
+ Minetest	;exec 'minetest'
