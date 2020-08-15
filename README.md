@@ -8,3 +8,6 @@ Emoji Font        : **Noto Emoji Fonts**
 
 And thats why I had to create this another branch.
 I also modified dwm and other suckless programs to be able to work using Noto Emoji Fonts.
+
+IT LOOKS LIKE THIS!
+![img]http://dotshare.it/public/images/uploads/8420.png
