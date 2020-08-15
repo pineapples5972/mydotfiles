@@ -193,7 +193,7 @@ static Key keys[] = {
 	/* { MODKEY|ShiftMask,		XK_c,		spawn,		SHCMD("") }, */
 	/* V is automatically bound above in STACKKEYS */
 	{ MODKEY,			XK_b,		togglebar,	{0} },
-	/* { MODKEY|ShiftMask,		XK_b,		spawn,		SHCMD("") }, */
+	{ MODKEY|ShiftMask,		XK_b,		spawn,		SHCMD("chwal") },
 	{ MODKEY,			XK_n,		spawn,		SHCMD("st -e nvim ~/tent/hogsmead/Softwares/home/vimwiki/index.md") },
 	{ MODKEY|ShiftMask,		XK_n,		spawn,		SHCMD("st -e newsboat; pkill -RTMIN+6 dwmblocks") },
 	{ MODKEY,			XK_m,		spawn,		SHCMD("st -e ncmpcpp") },
