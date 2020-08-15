@@ -1,4 +1,12 @@
-/* See LICENSE file for copyright and license details. */
+/* See LICENSE file for copyright and license details.
+            _     _ _           _
+__   _____ (_) __| ( )___    __| |_      ___ __ ___
+\ \ / / _ \| |/ _` |// __|  / _` \ \ /\ / / '_ ` _ \
+ \ V / (_) | | (_| | \__ \ | (_| |\ V  V /| | | | | |
+  \_/ \___/|_|\__,_| |___/  \__,_| \_/\_/ |_| |_| |_|
+
+*/
+
 
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
@@ -11,7 +19,7 @@ static const int swallowfloating    = 0;        /* 1 means swallow floating wind
 static const int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "monospace:size=10", "JoyPixels:pixelsize=10:antialias=true:autohint=true"  };
+static const char *fonts[]          = { "monospace:size=10", "Noto Emoji Fonts:pixelsize=10:antialias=true:autohint=true"  };
 static char dmenufont[]             = "monospace:size=10";
 static char normbgcolor[]           = "#222222";
 static char normbordercolor[]       = "#444444";
@@ -204,7 +212,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,		XK_Page_Up,	shifttag,	{ .i = -1 } },
 	{ MODKEY,			XK_Page_Down,	shiftview,	{ .i = +1 } },
 	{ MODKEY|ShiftMask,		XK_Page_Down,	shifttag,	{ .i = +1 } },
-	{ MODKEY,			XK_Insert,	spawn,		SHCMD("notify-send \"📋 Clipboard contents:\" \"$(xclip -o -selection clipboard)\"") },
+	{ MODKEY,			XK_Insert,	spawn,		SHCMD("notify-send \"Clipboard contents:\" \"$(xclip -o -selection clipboard)\"") },
 
 	{ MODKEY,			XK_F1,		spawn,		SHCMD("groff -mom /usr/local/share/dwm/larbs.mom -Tpdf | zathura -") },
 	{ MODKEY,			XK_F2,		spawn,		SHCMD("tutorialvids") },
