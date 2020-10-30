@@ -1,0 +1,17 @@
+hash -d cac=${XDG_CACHE_HOME:-$HOME/.cache} 
+hash -d cf=${XDG_CONFIG_HOME:-$HOME/.config} 
+hash -d D=${XDG_DOWNLOAD_DIR:-$HOME/yajnya} 
+hash -d d=${XDG_DOCUMENTS_DIR:-$HOME/pustak} 
+hash -d dt=${XDG_DATA_HOME:-$HOME/.local/share} 
+hash -d h=$HOME 
+hash -d t=~/tent 
+hash -d o=~/tent/castelobruxo/SARANG/Study/.Occult_Studies 
+hash -d m=${XDG_MUSIC_DIR:-$HOME/sangit} 
+hash -d mn=/mnt 
+hash -d pp=${XDG_PICTURES_DIR:-$HOME/chitra} 
+hash -d sc=$HOME/.local/bin 
+hash -d src=$HOME/.local/src 
+hash -d vv=${XDG_VIDEOS_DIR:-$HOME/chaya} 
+hash -d l=~/.local 
+hash -d S=~/tent/hogsmead/Softwares 
+hash -d w=~/tent/hogsmead/Wallpapers 

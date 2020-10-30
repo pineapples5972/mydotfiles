@@ -4,17 +4,15 @@
 
 # If you don't plan on reverting to bash, you can remove the link in ~/.profile
 # to clean up.
-export LC_CTYPE="en_GB.utf8"
 
 # Adds `~/.local/bin` to $PATH
-export PATH="$PATH:$(du "$HOME/.local/bin/" | cut -f2 | paste -sd ':')"
+export PATH="$PATH:$(du "$HOME/.local/bin" | cut -f2 | paste -sd ':')"
 
 # Default programs:
 export EDITOR="nvim"
 export TERMINAL="st"
 export BROWSER="surf"
 export READER="zathura"
-export FM="vifmrun"
 
 # ~/ Clean-up:
 export XDG_CONFIG_HOME="$HOME/.config"
@@ -38,6 +36,9 @@ export GOPATH="${XDG_DATA_HOME:-$HOME/.local/share}/go"
 export ANSIBLE_CONFIG="${XDG_CONFIG_HOME:-$HOME/.config}/ansible/ansible.cfg"
 export UNISON="${XDG_DATA_HOME:-$HOME/.local/share}/unison"
 export HISTFILE="${XDG_DATA_HOME:-$HOME/.local/share}/history"
+export SPECTRWM_CONF="${XDG_CONFIG_HOME:-$HOME/.config}/spectrwm/spectrwm.conf"
+export APPIMAGES_PATH="$HOME/tent/hogsmead/Softwares/Linux_Soft/AppImages"
+export BINARY_BUILDS_PATH="$HOME/tent/hogsmead/Softwares/Linux_Soft/Binary_Builds"
 
 # Other program settings:
 export DICS="/usr/share/stardict/dic/"
@@ -58,10 +59,10 @@ export AWT_TOOLKIT="MToolkit wmname LG3D"	#May have to install wmname
 export _JAVA_AWT_WM_NONREPARENTING=1	# Fix for Java applications in dwm
 
 # This is the list for lf icons:
-export LF_ICONS="di=📁:\
+export LF_ICONS="di=🍇:\
 fi=📃:\
 tw=🤝:\
-ow=📂:\
+ow=💜:\
 ln=⛓:\
 or=❌:\
 ex=🎯:\
@@ -70,11 +71,15 @@ ex=🎯:\
 *.me=✍:\
 *.ms=✍:\
 *.png=🖼:\
+*.webp=🖼:\
 *.ico=🖼:\
 *.jpg=📸:\
+*.jpe=📸:\
 *.jpeg=📸:\
 *.gif=🖼:\
 *.svg=🗺:\
+*.tif=🖼:\
+*.tiff=🖼:\
 *.xcf=🖌:\
 *.html=🌎:\
 *.xml=📰:\
@@ -91,6 +96,7 @@ ex=🎯:\
 *.R=📊:\
 *.rmd=📊:\
 *.Rmd=📊:\
+*.m=📊:\
 *.mp3=🎵:\
 *.opus=🎵:\
 *.ogg=🎵:\
@@ -108,6 +114,9 @@ ex=🎯:\
 *.z64=🎮:\
 *.v64=🎮:\
 *.n64=🎮:\
+*.gba=🎮:\
+*.nes=🎮:\
+*.gdi=🎮:\
 *.1=ℹ:\
 *.nfo=ℹ:\
 *.info=ℹ:\
@@ -118,19 +127,21 @@ ex=🎯:\
 *.ged=👪:\
 *.part=💔:\
 *.torrent=🔽:\
+*.jar=♨:\
+*.java=♨:\
 "
 
 [ ! -f ${XDG_CONFIG_HOME:-$HOME/.config}/shortcutrc ] && shortcuts >/dev/null 2>&1 &
 
-if pacman -Qs libxft-bgra >/dev/null 2>&1; then
+#if pacman -Qs libxft-bgra >/dev/null 2>&1; then
 	# Start graphical server on tty1 if not already running.
-	[ "$(tty)" = "/dev/tty1" ] && ! pidof Xorg >/dev/null 2>&1  && exec startx
-else
-	echo "\033[31mIMPORTANT\033[0m: Note that \033[32m\`libxft-bgra\`\033[0m must be installed for this build of dwm.
-Please run:
-	\033[32myay -S libxft-bgra\033[0m
-and replace \`libxft\`"
-fi
+	[ "$(tty)" = "/dev/tty1" ] && ! pidof Xorg >/dev/null 2>&1 && exec startx
+#else
+#	echo "\033[31mIMPORTANT\033[0m: Note that \033[32m\`libxft-bgra\`\033[0m must be installed for this build of dwm.
+#Please run:
+#	\033[32myay -S libxft-bgra-git\033[0m
+#and replace \`libxft\`"
+#fi
 
 # Switch escape and caps if tty and no passwd required:
 sudo -n loadkeys ${XDG_DATA_HOME:-$HOME/.local/share}/larbs/ttymaps.kmap 2>/dev/null
