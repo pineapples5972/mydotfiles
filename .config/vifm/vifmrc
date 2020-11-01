@@ -14,7 +14,20 @@ set smartcase
 set nohlsearch
 set incsearch
 set suggestoptions=normal,visual,view,otherpane,keys,marks,registers
-colorscheme luke
+colorscheme fancy
+
+" bookmarks
+mark c ~/.config
+mark l ~/.local
+mark h ~
+mark p ~/pustak
+mark y ~/yajnya
+mark o ~/tent/castelobruxo/SARANG/Study/.Advanced_Studies/
+mark s ~/tent/hogsmead/Softwares/
+mark W ~/tent/hogwarts/Wallpapers/
+mark M ~/tent/muzix/
+mark m ~/Sangit
+mark C "~/tent/castelobruxo/SARANG/Profile/My Crafts/"
 
 map <C-h> <C-w>h
 map <C-j> <C-w>j
@@ -42,6 +55,19 @@ nnoremap A cw
 nnoremap ,w :set wrap!<cr>
 nmap <space> tj
 nmap q ZQ
+
+" make a backup copy file
+nmap yp :clone <cr>
+
+" fast prompt
+nmap ; :!
+nmap v :!nvim
+
+" trash-cli to handle trash
+" nmap <delete> :!trash-put %f<cr>
+" nmap u :!trash-restore <cr>
+" nmap DD :!trash-empty <cr>
+
 
 fileview */ tree %c -L 1 --dirsfirst
 fileview ../ tree %c -L 1 --dirsfirst

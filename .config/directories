@@ -6,7 +6,7 @@ d   ${XDG_DOCUMENTS_DIR:-$HOME/pustak}
 dt  ${XDG_DATA_HOME:-$HOME/.local/share}
 h   $HOME
 t   ~/tent
-o   ~/tent/castelobruxo/SARANG/Study/.Occult_Studies
+o   ~/tent/castelobruxo/SARANG/Study/.Advanced_Studies
 m   ${XDG_MUSIC_DIR:-$HOME/sangit}
 mn  /mnt
 pp  ${XDG_PICTURES_DIR:-$HOME/chitra}
