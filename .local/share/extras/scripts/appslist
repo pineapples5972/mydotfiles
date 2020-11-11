@@ -1,0 +1,28 @@
+--------Browsers----------------------------------------------	;exec 'myprograms'
+🐱 qutebrowser	;exec qutebrowser
+🦁 brave	;exec brave ; notify-send "Browser Closed"
+ firefox	;exec firefox
+--------Office and Productivity----------------------------------------------	;exec 'myprograms'
+🏢 Libre Office	;cd $APPIMAGES_PATH && ./LibreOffice-7.0.0-x86_64.AppImage
+📔 Only Office	;cd $APPIMAGES_PATH && ./DesktopEditors*
+🍄 Gimp		;cd $APPIMAGES_PATH && ./GIMP*
+🗻 Inkscape	;exec inkscape
+📷 Krita	;cd $APPIMAGES_PATH && ./krita*
+--------Utilities and Tools----------------------------------------------	;exec 'myprograms'
+🧠 CPU-X	;cd $APPIMAGES_PATH && ./CPU-X*
+📺 Conky	;cd $APPIMAGES_PATH && ./Conky.AppImage
+ Etcher 	;cd $APPIMAGES_PATH && ./balenaEtcher-1.5.100-x64.AppImage
+🎶 cava		;cd $BINARY_BUILDS_PATH && exec $TERMINAL -e ./cava/cava
+🎼 vis		;cd $BINARY_BUILDS_PATH && exec $TERMINAL -e ./cli-visualizer/bin/vis
+👀 Speed Reader	;wine $BINARY_BUILDS_PATH/Speed Reader Enhanced Portable/Speed Reader Enhanced Portable/Speed Reader Enhanced.exe
+🐧 eDEX-UI	;exec $APPIMAGES_PATH/eDEX-UI.Linux.x86_64.AppImage
+🎹 lmms		;exec $APPIMAGES_PATH/lmms.AppImage
+🎥 MovieMonad	;exec $APPIMAGES_PATH/Movie-Monad.AppImage
+〽️ Stacer	;cd $APPIMAGES_PATH && ./Stacer.AppImage
+--------Games----------------------------------------------	;exec 'myprograms'
+🎏 Stunt Car Remake	;cd $APPIMAGES_PATH && ./Stunt_Car*
+🧝 Eternal Lands	;cd $APPIMAGES_PATH && ./Eternal*
+ Minetest	;cd $APPIMAGES_PATH && ./Minetest*
+🌷 Super Tux	;cd $APPIMAGES_PATH && ./SuperTux.AppImage
+======Add New Entry======================================	;$TERMINAL -e nvim "$HOME/.local/share/larbs/appslist" ; notify-send "New Entry Loaded"
+======Open Directory=====================================	;$TERMINAL -e lf $APPIMAGES_PATH
