@@ -1,8 +1,6 @@
-#MY DWM ARTIX RICE
-These dotfiles are just seperate files that I included for my need
-full version can be found in this [repo](https://github.com/void00r/voidrice)
-
-Programs used here are:
+#MY DWM ARTIX RICE 
+## Based on LARBS.xyz 
+These are dotfiles that I changed/modified/added to get best of larbs.
 
 Music Player: Moc (Music On Console)
 visualizer: cava
