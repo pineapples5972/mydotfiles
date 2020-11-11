@@ -102,3 +102,21 @@ filextype *.svg inkscape %f 2>/dev/null &
 filextype *.xcf gimp %f 2>/dev/null &
 
 set vifminfo=dhistory,chistory,tui,shistory,phistory,fhistory,dirstack,registers,bookmarks,bmarks
+
+" file types
+set classify='🍇:dir:/, :exe:,📃:reg:,⛓ :link:'
+" various file names
+set classify+='👆 ::../::, ::*.sh::, ::*.[hc]pp::, ::*.[hc]::, ::/^copying|license$/::, ::.git/,,*.git/::,📚 ::*.epub,,*.fb2,,*.djvu::,📚 ::*.pdf::,🌎 ::*.htm,,*.html,,**.[sx]html::,📰 ::*.xml::,🎨 ::*.css::,♨: ::*.java,,*.jar,,*.jad::'
+" archives
+set classify+='📦 ::*.7z,,*.ace,,*.arj,,*.bz2,,*.cpio,,*.deb,,*.dz,,*.gz,,*.lzh,,*.lzma,,*.rar,,*.rpm,,*.rz,,*.tar,,*.taz,,*.tb2,,*.tbz,,*.tbz2,,*.tgz,,*.tlz,,*.trz,,*.txz,,*.tz,,*.tz2,,*.xz,,*.z,,*.zip,,*.zoo::'
+" images
+set classify+='📸::*.jpg,,*.jpe,,*.jpg::,🖼️ ::*.bmp,,*.gif,,*.ico,,*.png,,*.webp,,*.ppm,,*.tga,,*.tif,,*.tiff,,*.xbm,,*.xpm,,*.xspf,,*.xwd::,📐::*.svg::'
+" audio
+set classify+='🎵 ::*.aac,,*.anx,,*.asf,,*.au,,*.axa::,🎼 ::*.flac::,🎵 ::*.m2a,,*.m4a,,*.mid,,*.midi,,*.mp3,,*.mpc,,*.oga,,*.ogg,,*.opus,,*.ogx,,*.ra,,*.ram,,*.rm,,*.spx,,*.wav,,*.wma,,*.ac3::'
+" media
+set classify+='🎬::*.avi,,*.ts,,*.axv,,*.divx,,*.m2v,,*.m4p,,*.m4v,,.mka,,*.mkv,,*.mov,,*.mp4,,*.flv,,*.mp4v,,*.mpeg,,*.mpg,,*.nuv,,*.ogv,,*.pbm,,*.pgm,,*.qt,,*.vob,,*.wmv,,*.xvid::'
+" office files
+set classify+='📘 ::*.doc,,*.docx,,*.odt,,*ods,,*.md::,📓 ::*.xls,,*.xls[mx],,*.csv::,📽️ ::*.pptx,,*.ppt::,📀 ::*.img,,*.iso::'
+" Miscellaneous
+set classify+='🔒 ::*.gpg::,🖌️ ::*.xcf,,*.psd::,⚙️ ::*.conf::,📜 ::*.tex::,📊  ::*.r,,*.R,,*.rmd::'
+set classify+='🎮 ::*.z64,,*.v64,,*.n64,,*.gba,,*.nes,,*.gdi::,📙 ::*.log::,🎓 ::*.bib::,👪 ::*.ged::,💔 ::*.part::,🔽 ::*.torrent::'
