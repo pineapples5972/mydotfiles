@@ -68,11 +68,14 @@ nmap v :!nvim
 " nmap u :!trash-restore <cr>
 " nmap DD :!trash-empty <cr>
 
+" tree %c -L 1 --dirsfirst
 
-fileview */ tree %c -L 1 --dirsfirst
-fileview ../ tree %c -L 1 --dirsfirst
+fileview */  exa -T --color=always --group-directories-first %c -L 1
+fileview ../ exa -T --color=always --group-directories-first %c -L 1
 fileviewer *.html w3m -dump %c
 filextype *.html,*.htm firefox %f 2>/dev/null &
+
+filextype *.ttf,*.otf display %f 2>/dev/null &
 
 fileviewer *.docx docx2txt %c -
 fileviewer *.odt odt2txt %c -

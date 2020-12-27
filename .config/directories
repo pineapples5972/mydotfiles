@@ -12,7 +12,7 @@ mn  /mnt
 pp  ${XDG_PICTURES_DIR:-$HOME/chitra}
 sc  $HOME/.local/bin
 src $HOME/.local/src
-vv  ${XDG_VIDEOS_DIR:-$HOME/chaya}
+vv  ${XDG_VIDEOS_DIR:-$HOME/chalchitra}
 l   ~/.local
 S   ~/tent/hogsmead/Softwares
 w   ~/tent/hogsmead/Wallpapers

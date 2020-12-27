@@ -7,8 +7,9 @@
 📕 xprofile	;$TERMINAL -e $EDITOR $HOME/.xprofile
 📔 xinitrc	;$TERMINAL -e $EDITOR $HOME/.xinitrc
 🧙 Zshrc	;$TERMINAL -e $EDITOR $HOME/.config/zsh/.zshrc
-📜 aliasrc	;$TERMINAL -e $EDITOR $HOME/.config/aliasrc
+🪄 aliasrc	;$TERMINAL -e $EDITOR $HOME/.config/aliasrc
 🦚 xresources	;$TERMINAL -e $EDITOR $HOME/.config/Xresources
+📜 xmenu	;$TERMINAL -e $EDITOR $HOME/.local/bin/xmenu
 ------------------------------Programs---------------------------	;exec 'myprograms'
 📁 Vifm		;$TERMINAL -e $EDITOR $HOME/.config/vifm/vifmrc
 🍇 lf		;$TERMINAL -e $EDITOR $HOME/.config/lf/lfrc

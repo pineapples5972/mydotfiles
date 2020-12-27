@@ -1,16 +1,19 @@
 --------Browsers----------------------------------------------	;exec 'myprograms'
 🐱 qutebrowser	;exec qutebrowser
 🦁 brave	;exec brave ; notify-send "Browser Closed"
- firefox	;exec firefox
+ firefox	;cd $APPIMAGES && ./Firefox* ; notify-send "Firefox Closed"
 --------Office and Productivity----------------------------------------------	;exec 'myprograms'
 🏢 Libre Office	;cd $APPIMAGES_PATH && ./LibreOffice-7.0.0-x86_64.AppImage
 📔 Only Office	;cd $APPIMAGES_PATH && ./DesktopEditors*
 🍄 Gimp		;cd $APPIMAGES_PATH && ./GIMP*
-🗻 Inkscape	;exec inkscape
+🗻 Inkscape	;cd $APPIMAGES_PATH && ./Inkscape*
 📷 Krita	;cd $APPIMAGES_PATH && ./krita*
+🖌️ MyPaint	;cd $APPIMAGES_PATH && ./MyPaint*
+🐧 TuxPaint	;exec tuxpaint
 --------Utilities and Tools----------------------------------------------	;exec 'myprograms'
 🧠 CPU-X	;cd $APPIMAGES_PATH && ./CPU-X*
 📺 Conky	;cd $APPIMAGES_PATH && ./Conky.AppImage
+🍭 Popsicle	;cd $APPIMAGES_PATH && ./Popsicle*
  Etcher 	;cd $APPIMAGES_PATH && ./balenaEtcher-1.5.100-x64.AppImage
 🎶 cava		;cd $BINARY_BUILDS_PATH && exec $TERMINAL -e ./cava/cava
 🎼 vis		;cd $BINARY_BUILDS_PATH && exec $TERMINAL -e ./cli-visualizer/bin/vis
@@ -24,5 +27,5 @@
 🧝 Eternal Lands	;cd $APPIMAGES_PATH && ./Eternal*
  Minetest	;cd $APPIMAGES_PATH && ./Minetest*
 🌷 Super Tux	;cd $APPIMAGES_PATH && ./SuperTux.AppImage
-======Add New Entry======================================	;$TERMINAL -e nvim "$HOME/.local/share/larbs/appslist" ; notify-send "New Entry Loaded"
+======Add New Entry======================================	;$TERMINAL -e nvim "$HOME/.local/share/extras/scripts/appslist" ; notify-send "New Entry Loaded"
 ======Open Directory=====================================	;$TERMINAL -e lf $APPIMAGES_PATH

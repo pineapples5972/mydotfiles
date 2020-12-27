@@ -1,0 +1,28 @@
+#!/bin/zsh
+
+cd ~/tent/hogsmead/Softwares/Linux_Soft/.nether/
+
+choices="telegram\ndiscord\nmatrix\nlist"
+
+chosen=$(echo -e "$choices" | dmenu -i)
+
+case "$chosen" in
+	telegram)
+		cd ~/altar/tlg && ./nether -many -workdir ./Tux && notify-send "🦉telegram closed" ;;
+
+	twilight)
+		./nether -many -workdir ./Twilight && notify-send "🦉telegram closed" ;;
+
+	discord)
+		cd $APPIMAGES_PATH && ./Ripcord* ; notify-send "🦉discord closed" ;;
+
+	matrix)
+		$TERMINAL -e gomuks && notify-send "🦉You are out of Matrix" ;;
+	list)
+		notify-send "telegram
+telegram
+discord
+matrix"
+	;;
+
+esac

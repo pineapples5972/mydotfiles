@@ -1,0 +1,4 @@
+#!/bin/sh
+visits="$HOME/.local/share/larbs/visits"
+
+less "$visits" | grep -P "^$(less "$visits" | grep ";" | sed 's/\t.*//g' | dmenu -i -p "All Programs: (ESC to cancel)" -l 170 | awk '{print $1}')\s" | sed 's/.*\t;//' | ${SHELL:-"/bin/bash"} &

@@ -1,0 +1,60 @@
+#!/bin/sh
+
+keybinds='notify-send -t 30000 "$(cat ~/.local/bin/tutor)"'
+manual="groff -mom /usr/local/share/dwm/larbs.mom -Tpdf | zathura -"
+cat <<EOF | xmenu | sh &
+Applications
+	Accessaries
+		Paint		${mypaint:-cd $APPIMAGES_PATH && ./MyPaint*}
+		Calculator	${calc:-st -e bc}
+		calendar	${cale:-st -e calcurse}
+		emoji-picker	dmenuunicode
+		news		$TERMINAL -e newsboat
+		notes		vimwikia
+		Screenshot	flameshot gui
+		Screenrecord	dmenurecord
+		USBFlasher	${popsicle:-cd $APPIMAGES_PATH && ./Popsicle*}
+	FileManagers
+		Thunar	thunar
+		RoxFiler	rox
+		Vifm	${vifm:-st -e vu}
+		lf	${lf:-st -e lf}
+	Browsers
+		Brave	brave
+		QuteBrowser	qutebrowser
+	ImageEditors
+		Gimp	${Gimp:-cd $APPIMAGES_PATH && ./GIMP*}
+		Krita	${krita:-cd $APPIMAGES_PATH && ./krita*}
+		Inkscape	${inkscape:-cd $APPIMAGES_PATH && ./Inkscape*}
+	Office
+		LibreOffice	${libre:-cd $APPIMAGES_PATH && ./LibreOffice*}
+	Sound
+		MusicPlayer	$TERMINAL -e mocp
+		SystemVolume	$TERMINAL -e pulsemixer; kill -44 $(pidof dwmblocks)
+		play/pause	mocp --toggle-pause
+		Next		mocp --next
+		Previous	mocp --previous
+		repeat		mocp --toggle-repeat & notify-send "repeat toggle"
+		visualizers
+			cava		${cava:-cd $BINARY_BUILDS_PATH && $TERMINAL -e ./cava/cava}
+			vis		${vis:-cd $BINARY_BUILDS_PATH && $TERMINAL -e ./cli-visualizer/bin/vis}
+	AllPrograms	$myprograms
+Terminals
+	xterm	xterm
+	urxvt	urxvt
+	st	st
+Utilities
+	CloseWindows	xkill
+	AppStore	sudo pamac-manager
+	NetworkSettings	$TERMINAL -e sudo nmtui
+System
+	reload	kill -HUP $(pidof -s dwm)
+	sleep	sudo -A zzz
+	lock	slock & xset dpms force off; mocp --pause; pauseallmpv
+	logout	kill -TERM $(pidof -s dwm)
+	Reboot	${reb:-sudo -A reboot}
+	Shutdown	${shut:-sudo -A shutdown -h now}
+
+Settings	kombini spells
+Help	$manual
+EOF

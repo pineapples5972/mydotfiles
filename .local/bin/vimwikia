@@ -1,0 +1,2 @@
+#!/bin/sh
+exec $TERMINAL -e nvim "/home/me/tent/hogsmead/Softwares/home/vimwiki/index.md" &
