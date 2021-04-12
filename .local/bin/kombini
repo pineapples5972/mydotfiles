@@ -1,27 +1,27 @@
 #!/bin/sh
 
-# This Script outputs dmenu list of text and execute everything placed after ';' written in $file
-# Currently I use it to run appimages saved in fuse drives to save home storage and
-# access config files directly from dmenu
-# observe the appslist and spells file for reference and create/edit your files accordingly
-# if you put create more files make sure to add them in #choices variable
-# if invoke with argument it outputs desired file or invoked without arguments shows dmenu list.
-# I know comments are bloat so remove them if you wish.
+# Put your bookmarks or App launchers list in scripts location
+# script can be written like this
+#      name of the subject	<tab>;<semicolon>command
+# eg.- librewolf	;exec librewolf
+# dmenu shows first field <subject> and execute second field<command>which comes after tab and ;<semicolon>
+# thats why new script should be written in sam way.
 
-choices="appslist\nconfigs\nspells"
-file=${1:-$(echo -e "$choices" | dmenu -i -l 15)}
+scripts=$(ls ~/.local/share/extras/scripts)
+selection=${1:-$(echo "$scripts" | dmenu -i -l 15)}
 
-var=$HOME/.local/share/extras/scripts/$file
+file=$HOME/.local/share/extras/scripts/$selection
 
-[ -z "$var" ]
-	less "$var" | grep -P "^$(less "$var" | grep ";" | sed 's/\t.*//g' | rofi -show -dmenu -yoffset 01 -i -l 25 -p "コンビニ 👉" | awk '{print $1}')\s" | sed 's/.*\t;//' | ${SHELL:-"/bin/bash"} &
+[ -z "$file" ]
+less "$file" | grep -P "^$(less "$file" | grep ";" | sed 's/\t.*//g' | dmenu -i -p "コンビニ 👉" -l 34 | awk '{print $1}')\s" | sed 's/.*\t;//' | ${SHELL:-"/bin/sh"} &
 
+# To see output in rofi use this line in place of  "dmenu -i -p"
 # rofi -show -dmenu -yoffset 01 -i -l 25
 
-# dmenu -i -p "👉" -l 170 |
+# To see output in dmenu
+# dmenu -i -p "your prompt text 👉" -l 170 |
 
-# my rough writing are from here
-# dmenu_path | dmenu "$@" | ${SHELL:-"/bin/sh"} &
-# [ -z "$1" ]
-
-# xargs -r st -e
+# kombini can be invoke with or without argument
+# eg.- [me@artix ~]$ kombini 		-	it will show dmenu with listing of your scripts
+#      [me@artix ~]$ kombini spells	-	it will directly run the script name spells
+# This later become useful to run in launchers like xmenu or binding with keys

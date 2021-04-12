@@ -1,0 +1,5 @@
+#!/bin/bash
+
+file=$(ls $HOME | dmenu -i -l 25)
+curl -F "file=@$file" 0x0.st | xclip -selection c
+notify-send "your file in link"

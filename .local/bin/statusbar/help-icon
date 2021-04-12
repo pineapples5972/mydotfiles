@@ -1,0 +1,26 @@
+#!/bin/sh
+
+# The clickable help menu. Middle click to restart wm.
+
+# If dwm is running, use dwm's readme and restart.
+pidof dwm >/dev/null &&
+	READMEFILE=/usr/local/share/dwm/larbs.mom
+	restartwm() { pkill -HUP dwm ;} ||
+		restartwm() { i3 restart ;}
+
+case $BLOCK_BUTTON in
+	1) ~/.local/src/xmenu/xmenu.sh ;;
+	2) restartwm ;;
+	3) notify-send "❓Are you confused?" "\- Left click to open Menu.
+- Press Super + F1 opens LARBS guide.
+- Middle click to refresh window manager." ;;
+	6) "$TERMINAL" -e "$EDITOR" "$0" ;;
+esac; echo "| ❓"
+
+
+#1) ~/.local/src/xmenu/xmenu.sh ;;
+#	3) notify-send "Are you confused?" "\- Press Super + F1 for Guide" ;;
+#esac; echo "Menu"
+
+
+# groff -mom "${READMEFILE:-${XDG_DATA_HOME:-$HOME/.local/share}/larbs/readme.mom}" -Tpdf | zathura -

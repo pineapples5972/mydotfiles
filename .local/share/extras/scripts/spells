@@ -1,24 +1,14 @@
-----------------------------Veil---------------------------[return]----	;exec 'myprograms'
-🐱 Uncloak Veil	;fireplaces floo
-🦁 Cloak Veil	;fireplaces flew
----------------------------Configs---------------------------------	;exec 'myprograms'
-📘 Vimr	;$TERMINAL -e $EDITOR $HOME/.config/nvim/init.vim &
-📔 zprofile	;$TERMINAL -e $EDITOR $HOME/.zprofile
-📕 xprofile	;$TERMINAL -e $EDITOR $HOME/.xprofile
-📔 xinitrc	;$TERMINAL -e $EDITOR $HOME/.xinitrc
-🧙 Zshrc	;$TERMINAL -e $EDITOR $HOME/.config/zsh/.zshrc
-🪄 aliasrc	;$TERMINAL -e $EDITOR $HOME/.config/aliasrc
-🦚 xresources	;$TERMINAL -e $EDITOR $HOME/.config/Xresources
-📜 xmenu	;$TERMINAL -e $EDITOR $HOME/.local/bin/xmenu
-------------------------------Programs---------------------------	;exec 'myprograms'
-📁 Vifm		;$TERMINAL -e $EDITOR $HOME/.config/vifm/vifmrc
-🍇 lf		;$TERMINAL -e $EDITOR $HOME/.config/lf/lfrc
-📺 straw-viewer	;$TERMINAL -e $EDITOR $HOME/.config/straw-viewer/straw-viewer.conf
-🌎 qutebrowser	;$TERMINAL -e $EDITOR $HOME/.config/qutebrowser/config.py
-📰 news sources	;$TERMINAL -e $EDITOR $HOME/.config/newsboat/urls
-📖 zathura	;$TERMINAL -e $EDITOR $HOME/.config/zathura/zathurarc
------------------------------WM---------------------------------	;exec 'myprograms'
-🍙 i3		;$TERMINAL -e $EDITOR $HOME/.config/i3/config
-🎏 Spectrwm	;$TERMINAL -e $EDITOR $HOME/.config/spectrwm/spectrwm.conf
-🧝 dwm		;$TERMINAL -e vifm $HOME/.local/src/dwm
-============================Edit==============================	;$TERMINAL $EDITOR $HOME/.local/share/extras/scripts/spells
+----------------------------Quick Switches-------------------------------	;notify-send "why you never read a spell book before?" &
+🔪 killer menu		;dmenukill
+ Search Youtube	;ytfz
+🔖 bookmarks		;bookmarks
+🍹 Next Background	;selectbg
+📂 Whereismybg		;$TERMINAL -e vifm $(readlink $HOME/.local/share/bg)
+🐱 MountAllDrives	;fireplaces floo
+🦁 UnmountAllDrives	;fireplaces flew
+📰 Read Newspape	;getenews
+🌅 Fetch New Wallpapers	;getwalls
+🍱 Manage Packages	;paclaunch
+🔳 Keymaps US		;setxkbmap us ; notify-send "keymaps set as US"
+🔲 Keymaps DVORAK	;setxkbmap dvorak ; notify-send "keymaps set as DVORAK"
+------------------------Add NEW SPELLS-----------------------------------	;$TERMINAL -e nvim ~/.local/share/extras/scripts/spells && notify-send "Spellbook Updated" &

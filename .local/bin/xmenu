@@ -2,18 +2,8 @@
 
 keybinds='notify-send -t 30000 "$(cat ~/.local/bin/tutor)"'
 manual="groff -mom /usr/local/share/dwm/larbs.mom -Tpdf | zathura -"
-cat <<EOF | xmenu | sh &
+less <<EOF | xmenu | sh &
 Applications
-	Accessaries
-		Paint		${mypaint:-cd $APPIMAGES_PATH && ./MyPaint*}
-		Calculator	${calc:-st -e bc}
-		calendar	${cale:-st -e calcurse}
-		emoji-picker	dmenuunicode
-		news		$TERMINAL -e newsboat
-		notes		vimwikia
-		Screenshot	flameshot gui
-		Screenrecord	dmenurecord
-		USBFlasher	${popsicle:-cd $APPIMAGES_PATH && ./Popsicle*}
 	FileManagers
 		Thunar	thunar
 		RoxFiler	rox
@@ -38,13 +28,30 @@ Applications
 		visualizers
 			cava		${cava:-cd $BINARY_BUILDS_PATH && $TERMINAL -e ./cava/cava}
 			vis		${vis:-cd $BINARY_BUILDS_PATH && $TERMINAL -e ./cli-visualizer/bin/vis}
-	AllPrograms	$myprograms
+	AllPrograms	xfce4-appfinder
+	MyPrograms	$myprograms
+Accessaries
+	WallpaperSettings
+		NextWallpaper	setbg ~/chitra/walls/HP
+		CurrentWallpaper	$TERMINAL -e vifm $(readlink $HOME/.local/share/bg)
+		DownloadNewWallpapers	getwalls
+	Paint		${mypaint:-cd $APPIMAGES_PATH && ./MyPaint*}
+	Calculator	${calc:-st -e bc}
+	calendar	${cale:-st -e calcurse}
+	emoji-picker	dmenuunicode
+	news		$TERMINAL -e newsboat
+	notes		vimwikia
+	Screenshot	flameshot gui
+	Screenrecord	dmenurecord
+	USBFlasher	${popsicle:-cd $APPIMAGES_PATH && ./Popsicle*}
 Terminals
 	xterm	xterm
 	urxvt	urxvt
 	st	st
 Utilities
 	CloseWindows	xkill
+	KillerMenu	dmenukill
+	ManagePackages	paclaunch
 	AppStore	sudo pamac-manager
 	NetworkSettings	$TERMINAL -e sudo nmtui
 System
@@ -55,6 +62,11 @@ System
 	Reboot	${reb:-sudo -A reboot}
 	Shutdown	${shut:-sudo -A shutdown -h now}
 
-Settings	kombini spells
+Settings
+	Keyboard
+		DvorakLayout	setxkbmap dvorak ; notify-send "keymaps set as Dvorak"
+		USLayout	setxkbmap us ; notify-send "keymaps set as US"
+	ChangeConfigurations	kombini configs
+	AllSettings	xfce4-settings-manager
 Help	$manual
 EOF

@@ -1,0 +1,6 @@
+#!/bin/sh
+
+case $BLOCK_BUTTON in
+	1) ~/.local/src/xmenu/xmenu.sh ;;
+	3) notify-send "Are you confused?" "\- Press Super + F1 for Guide" ;;
+esac; echo "Menu"

@@ -1,0 +1,19 @@
+#!/bin/sh
+
+filter() { mocp -Q %title } #sed "/^volume:/d;s/\\&/&amp;/g;s/\\[paused\\].*/⏸/g;/\\[playing\\].*/d" | paste -sd ' ';}
+
+pidof -x mocp >/dev/null 2>&1 || mocp >/dev/null 2>&1 &
+
+case $BLOCK_BUTTON in
+	1) mocp -i | filter ; setsid -f "$TERMINAL" -e mocp ;;  # right click, pause/unpause
+	2) mocp --toggle-pause | filter ;;  # right click, pause/unpause
+	3) mocp -i | filter ; notify-send "🎵 Music module" "\- Shows mpd song playing.
+- ⏸ when paused.
+- Left click opens ncmpcpp.
+- Middle click pauses.
+- Scroll changes track.";;  # right click, pause/unpause
+	4) mocp --previous   | filter ;;  # scroll up, previous
+	5) mocp --next   | filter ;;  # scroll down, next
+	6) mocp -i | filter ; "$TERMINAL" -e "$EDITOR" "$0" ;;
+	*) mocp -i | filter ;;
+esac

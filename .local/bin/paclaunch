@@ -1,6 +1,6 @@
 #!/bin/sh
 
-action=$(echo -e "Install Program\nRemove Program\nRemove Waste\nUpdate System\nRefresh Repos" | dmenu -p "Software Manager: " -i)
+action=$(echo "Install Program\nRemove Program\nRemove Waste\nUpdate System\nRefresh Repos" | dmenu -p "Software Manager: " -i)
 
 case $action in
   "Install Program")

@@ -1,0 +1,8 @@
+#!/bin/sh
+#time=$(date "+%M")
+#loop() {
+#	[ $time > "60" ] && sleep 15m && setbg ~/chitra/walls ; loop
+#}
+
+#loop
+while true; do setbg ~/chitra/walls/ && sleep 15m ; done

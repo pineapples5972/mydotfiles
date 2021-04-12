@@ -1,0 +1,7 @@
+#!/bin/sh
+
+location=$(ls ~/chitra/walls)
+selection=${1:-$(echo "$location" | dmenu -i -l 15)}
+
+cd ~/chitra/walls
+setbg $selection

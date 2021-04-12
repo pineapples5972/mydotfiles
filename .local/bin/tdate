@@ -1,0 +1,11 @@
+#!/bin/sh
+
+read -p "Input date in MM/DD/YYYY: " INPUT
+
+sudo date -s $INPUT
+
+sudo hwclock -w
+
+sudo hwclock --systohc
+
+echo "current dateandtime: $(date)"
