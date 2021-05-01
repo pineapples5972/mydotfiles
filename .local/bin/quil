@@ -1,0 +1,31 @@
+#!/bin/sh
+
+rust() {
+	zathura /home/me/pustak/downloaded/rust.epub &
+	cd /home/me/pustak/studies/DataScience/Programming/rust && st &
+	st -e w3m https://doc.rust-lang.org/std/index.html &
+	notify-send "📖 rust study session is on" &
+}
+
+bash() {
+	st -e bat ~/pustak/studies/reference/bash.md &
+	st -e bat ~/tent/hogsmead/Softwares/home/vimwiki/Everything\ Need\ to\ Know\ about\ Tmux.md &
+	cd ~/pustak/bashfu && st &
+	notify-send "📖 bash study session is on" &
+}
+
+python() {
+	st -e bat ~/pustak/studies/reference/python.md &
+	st -e bat ~/pustak/studies/DataScience/Programming/python/Python_Notes_from_Voidsoul.md &
+	mpv ~/pustak/studies/DataScience/Programming/python/Python_Tutorial_For_Beginners*.mkv &
+	cd ~/pustak/studies/DataScience/Programming/python/playground && st &
+	zathura ~/pustak/studies/DataScience/Programming/python/Books/PythonBasics.pdf &
+	zathura ~/pustak/studies/DataScience/Programming/python/Books/Haltermanpythonbook.pdf &
+	notify-send "📖 python learning session is on"
+
+}
+
+choice="rust\nbash\npython"
+selection=${1:-$(echo "$choice" | dmenu -i -p "Study of: " -l 15)}
+
+$selection
