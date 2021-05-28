@@ -1,0 +1,28 @@
+#!/bin/sh
+
+cd ~/tent/hogsmead/Softwares/Linux_Soft/.nether/ || exit
+
+choices="telegram\ngomuks\nschildichat\ndiscord\nlist"
+
+chosen=${1:-$(echo "$choices" | dmenu -i)}
+
+case "$chosen" in
+	telegram)
+		cd ~/altar/tlg && ./nether -many -workdir ./Tux && notify-send "🦉telegram closed" ;;
+	gupttg)
+		cd ~/altar/tlg && ./nether -many -workdir ./.cache && notify-send "can you sleep now?" ;;
+	gomuks)
+		$TERMINAL -e gomuks && notify-send "🦉gomuks closed" ;;
+	schildichat)
+		cd "$APPIMAGES_PATH" && ./SchildiChat*.AppImage ; notify-send "🦉You Escaped Matrix" ;;
+	discord)
+		cd "$APPIMAGES_PATH" && ./Discord*.AppImage ; notify-send "Closed discord" ;;
+	list)
+		notify-send "telegram
+gomuks
+schildichat
+discord"
+
+	;;
+
+esac

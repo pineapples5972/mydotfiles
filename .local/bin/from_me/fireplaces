@@ -8,7 +8,7 @@ case "$1" in
              sudo mount /dev/sdb2 ~/tent/muzix &&
 	     sudo mount /dev/sdb3 ~/tent/castelobruxo &&
 	     sudo mount /dev/sdb4 ~/tent/hogwarts &&
-	     notify-send "You got Access in:
+	     notify-send "📨 You are a member of:
 🚢 Durmstrang
 🌲 Ilvermony
 🏘  Hogsmead
@@ -23,7 +23,7 @@ case "$1" in
              sudo umount /dev/sdb2 &&
 	     sudo umount /dev/sdb3 &&
 	     sudo umount /dev/sdb4 &&
-	     notify-send "(Enjoy Holidays) Regards-
+	     notify-send "📨See you next time:
 🚢 Durmstrang
 🌲 Ilvermony
 🏘  Hogsmed
@@ -32,5 +32,5 @@ case "$1" in
 🧙 Hogwarts"
 	;;
          *)
-	   notify-send "Do you want to floo in or flew out from portals" ;;
+	   notify-send "🔔 Do you want to floo in or flew out from portals" ;;
 esac

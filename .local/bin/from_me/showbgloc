@@ -1,0 +1,5 @@
+#!/bin/sh
+
+bgloc=$(readlink "$HOME/.local/share/bg")
+
+sxiv "$bgloc" && $TERMINAL -e vifm "$bgloc"

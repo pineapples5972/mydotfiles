@@ -1,0 +1,6 @@
+#!/bin/sh
+
+while :
+	do
+		echo "$(nettraf) $(pacpackages) $(news) $(memory) $(disk) $(cpu) $(moonphase) $(weather) $(volume) $(clock)"
+	done

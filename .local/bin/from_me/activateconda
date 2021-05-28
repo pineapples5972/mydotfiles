@@ -1,0 +1,5 @@
+#!/bin/bash
+cd /home/me/pustak/datascience/
+source /home/me/.zshrc
+conda activate /home/me/pustak/datascience/env ;
+notify-send "conda activated" &

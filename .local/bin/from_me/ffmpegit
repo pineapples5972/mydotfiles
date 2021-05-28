@@ -1,0 +1,8 @@
+#!/bin/sh
+
+echo "Enter the start point:" ; read -r start
+echo "Enter the end point:" ; read -r end
+echo "Enter the format:" ; read -r extn
+inputfile="$1"
+
+ffmpeg -i $inputfile -ss $start -to $end -c copy trimmed.$extn ; echo "done"
