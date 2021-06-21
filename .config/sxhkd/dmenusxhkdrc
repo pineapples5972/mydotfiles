@@ -1,0 +1,6 @@
+#Basic binds
+#super + space
+#appmenu
+
+super + S
+	rofilauncher

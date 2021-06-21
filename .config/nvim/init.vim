@@ -1,5 +1,6 @@
 let mapleader =","
-
+set path +=**
+set wildmenu
 if ! filereadable(system('echo -n "${XDG_CONFIG_HOME:-$HOME/.config}/nvim/autoload/plug.vim"'))
 	echo "Downloading junegunn/vim-plug to manage plugins..."
 	silent !mkdir -p ${XDG_CONFIG_HOME:-$HOME/.config}/nvim/autoload/
@@ -19,13 +20,16 @@ Plug 'bling/vim-airline'
 Plug 'tpope/vim-commentary'
 Plug 'kovetskiy/sxhkd-vim'
 Plug 'ap/vim-css-color'
+Plug 'chriskempson/base16-vim'
 call plug#end()
+
 
 set bg=light
 set go=a
 set mouse=a
 set nohlsearch
 set clipboard+=unnamedplus
+
 
 " Some basics:
 	nnoremap c "_c
@@ -128,8 +132,14 @@ if &diff
     highlight! link DiffText MatchParen
 endif
 
+" Commenting stuff
+	nnoremap C <Esc>^i#<Esc>
+
 " making HTML suckless way
 	autocmd FileType html inoremap .. <Esc>/<++><Enter>"_c4l
+
+" Recompile suckless programs automatically
+	autocmd BufWritePost config.h,config.def.h !sudo make install
 
 " Just Type tagname and press - space backspace while in Insert Mode
 	autocmd FileType html inoremap ., <Esc>vbyi<<Esc>pa></<Esc>ea><Space><++><Esc>3b2hi

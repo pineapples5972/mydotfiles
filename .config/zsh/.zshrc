@@ -13,7 +13,7 @@ autoload -U colors && colors	# Load colors
 #PS1="%B%{$fg[yellow]%}%(?.%1~.%?) >_ "
 
 #castelobruxo >_
-PS1="%B%{$fg[yellow]%}%(?.%1~.%{$fg[blue]%}%?) %{$fg[green]%}>_ %{$reset_color%}"
+PS1="%B%{$fg[magenta]%}%(?.%1~.%{$fg[blue]%}%?) %{$fg[green]%}>_ %{$reset_color%}"
 
 #√ castelobruxo %
 #PS1='%(?.%F{green}√.%F{red}?%?)%f %B%F{240}%1~%f%b %# '
@@ -83,11 +83,10 @@ lfcd () {
         [ -d "$dir" ] && [ "$dir" != "$(pwd)" ] && cd "$dir"
     fi
 }
-bindkey -s '^o' 'lfcd\n'
 
+bindkey -s '^o' 'cd "$(dirname "$(fzf)")"\n'
 bindkey -s '^a' 'bc -l\n'
-
-bindkey -s '^f' 'cd "$(dirname "$(fzf)")"\n'
+bindkey -s '^f' 'fuzzyfm\n'
 
 bindkey '^[[P' delete-char
 
@@ -97,3 +96,6 @@ bindkey '^e' edit-command-line
 
 # Load syntax highlighting; should be last.
 source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh 2>/dev/null
+source /home/me/.config/broot/launcher/bash/br
+
+fm600

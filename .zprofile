@@ -11,9 +11,9 @@ export PATH="$PATH:$(du "$HOME/.local/bin" | cut -f2 | paste -sd ':')"
 # Default programs:
 export EDITOR="nvim"
 export TERMINAL="st"
-export BROWSER="vieb"
+export BROWSER="nyxt"
 export READER="zathura"
-export FM="vu"
+export FM="$HOME/.local/bin/vu"
 export myprograms="kombini"
 
 # ~/ Clean-up:
@@ -39,12 +39,15 @@ export ANSIBLE_CONFIG="${XDG_CONFIG_HOME:-$HOME/.config}/ansible/ansible.cfg"
 export UNISON="${XDG_DATA_HOME:-$HOME/.local/share}/unison"
 export HISTFILE="${XDG_DATA_HOME:-$HOME/.local/share}/history"
 export SPECTRWM_CONF="${XDG_CONFIG_HOME:-$HOME/.config}/spectrwm/spectrwm.conf"
+export WWW_HOME="https://isle.honeypot.im"
 export APPIMAGES_PATH="$HOME/tent/hogsmead/Softwares/Linux_Soft/AppImages"
 export BINARY_BUILDS_PATH="$HOME/tent/hogsmead/Softwares/Linux_Soft/Binary_Builds"
+export NOTES_PATH="$HOME/tent/hogsmead/Softwares/home/vimwiki"
+export STUDIES_PATH="$HOME/pustak/studies"
 
 # Other program settings:
 export DICS="/usr/share/stardict/dic/"
-export SUDO_ASKPASS="$HOME/.local/bin/dmenupass"
+export SUDO_ASKPASS="$HOME/.local/bin/from_lukesmith/dmenupass"
 export FZF_DEFAULT_OPTS="--layout=reverse --height 40%"
 export LESS=-R
 export LESS_TERMCAP_mb="$(printf '%b' '[1;31m')"

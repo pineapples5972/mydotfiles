@@ -1,7 +1,7 @@
-http://lukesmith.xyz/rss.xml
-https://notrelated.libsyn.com/rss
+http://lukesmith.xyz/rss.xml "~Luke Smith (YouTube)"
+https://notrelated.libsyn.com/rss "~Luke Smith (YouTube)"
 https://www.youtube.com/feeds/videos.xml?channel_id=UC2eYFnH61tmytImy1mTYvhA "~Luke Smith (YouTube)"
-https://www.archlinux.org/feeds/news/ "tech"
-https://artixlinux.org/feed.php "tech"
-
+https://www.archlinux.org/feeds/news/ "linux"
+https://artixlinux.org/feed.php "linux"
+https://linuxreviews.org/feed.rss "linux"
 http://aryamantavya.in/category/vedic-science-hi/feed/ "vedic science"

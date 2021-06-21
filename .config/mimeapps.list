@@ -1,0 +1,30 @@
+[Default Applications]
+text/x-shellscript=text.desktop;
+x-scheme-handler/magnet=torrent.desktop;
+application/x-bittorrent=torrent.desktop;
+x-scheme-handler/mailto=xfce4-mail-reader.desktop
+text/plain=text.desktop;
+application/postscript=pdf.desktop;
+application/pdf=pdf.desktop;
+image/png=img.desktop;
+image/jpeg=img.desktop;
+image/gif=img.desktop;
+application/rss+xml=rss.desktop
+video/x-matroska=video.desktop
+x-scheme-handler/lbry=lbry.desktop
+inode/directory=xfce4-file-manager.desktop
+x-scheme-handler/tg=telegramdesktop.desktop
+application/vnd.openxmlformats-officedocument.wordprocessingml.document=userapp-LibreOffice-7.0.0-x86_64.AppImage-25PJX0.desktop
+x-scheme-handler/http=xfce4-web-browser.desktop
+x-scheme-handler/https=xfce4-web-browser.desktop
+x-scheme-handler/trash=xfce4-file-manager.desktop
+
+[Added Associations]
+x-scheme-handler/http=xfce4-web-browser.desktop;
+x-scheme-handler/https=xfce4-web-browser.desktop;
+application/x-shellscript=xed.desktop;
+application/vnd.openxmlformats-officedocument.wordprocessingml.document=userapp-LibreOffice-7.0.0-x86_64.AppImage-25PJX0.desktop;
+x-scheme-handler/mailto=xfce4-mail-reader.desktop;
+inode/directory=xfce4-file-manager.desktop;
+x-scheme-handler/trash=xfce4-file-manager.desktop;
+
