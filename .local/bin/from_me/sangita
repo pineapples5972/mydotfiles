@@ -1,0 +1,7 @@
+#!/bin/sh
+
+dir="$HOME/tent/muzix/Covers"
+
+selection="${1:-$(ls "$dir" | dmenu -i -l 5)}"
+cd $dir ;
+mpv "$selection"

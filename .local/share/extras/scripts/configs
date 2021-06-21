@@ -17,5 +17,5 @@
 -----------------------------WM---------------------------------	;notify-send "The power of terminal lies in how well you can tile it" &
 🍙 i3		;$TERMINAL -e $EDITOR $HOME/.config/i3/config
 🎏 Spectrwm	;$TERMINAL -e $EDITOR $HOME/.config/spectrwm/spectrwm.conf
-🧝 dwm		;$TERMINAL -e vifm $HOME/.local/src/dwm
-============================Edit==============================	;$TERMINAL $EDITOR $HOME/.local/share/extras/scripts/configs && notify-send "configs has been edited" &
+🧝 dwm		;cd $HOME/.local/src/mydwm/ && $TERMINAL -e $EDITOR $HOME/.local/src/mydwm/config.h && notify-send -h string:frcolor:#44cs44 "DWM updated" "Press 'Mod + home' to reload"
+============================Edit==============================	;$TERMINAL $EDITOR $HOME/.local/share/extras/scripts/configs && notify-send -h string:frcolor:#44c011 "configs has been edited" &

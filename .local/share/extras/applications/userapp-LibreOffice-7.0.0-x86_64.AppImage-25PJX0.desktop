@@ -1,0 +1,8 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Type=Application
+NoDisplay=true
+Exec=/home/me/tent/hogsmead/Softwares/Linux_Soft/AppImages/LibreOffice-7.0.0-x86_64.AppImage %f
+Name=LibreOffice-7.0.0-x86_64.AppImage
+Comment=Custom definition for LibreOffice-7.0.0-x86_64.AppImage

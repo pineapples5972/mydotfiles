@@ -1,0 +1,33 @@
+#!/usr/bin/bash
+# Outputs a configuration for lemonbar
+
+trap 'Update' 5
+
+Cpu() {
+	cpu
+}
+
+Clock(){
+	clock
+}
+
+
+Memory() {
+	memory
+}
+
+
+Sound(){
+	volume
+}
+
+Update() {
+	echo -e "%{r} $(Cpu) $(Memory) $(Sound) $(Clock)"
+	#echo -e "%{r} $(NewModule)"
+}
+
+while true; do
+	Update
+	sleep 5s &
+	wait
+done

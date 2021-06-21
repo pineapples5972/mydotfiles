@@ -1,12 +1,13 @@
 ----------------------------Quick Switches-------------------------------	;notify-send "why you never read a spell book before?" &
 🔪 killer menu		;dmenukill
  Search Youtube	;ytfz
-🔖 bookmarks		;bookmarks
+🔖 bookmarks		;bookish
+🔎 SearchInternet	;dmsearch
 🍹 Next Background	;selectbg
 📂 Whereismybg		;$TERMINAL -e vifm $(readlink $HOME/.local/share/bg)
 🐱 MountAllDrives	;fireplaces floo
 🦁 UnmountAllDrives	;fireplaces flew
-📰 Read Newspape	;getenews
+📰 Read Newspaper	;getenews
 🌅 Fetch New Wallpapers	;getwalls
 🍱 Manage Packages	;paclaunch
 🔳 Keymaps US		;setxkbmap us ; notify-send "keymaps set as US"

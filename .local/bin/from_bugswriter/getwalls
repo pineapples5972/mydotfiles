@@ -1,8 +1,9 @@
 #!/bin/bash
 
-walldir="$HOME/chitra/walls/wallhaven"
+walldir="$HOME/chitra/walls/newwalls"
+
 maxpage=5
-tagoptions="#minimalism\n#Cyberpunk 2077\n#fantasy girl\n#digital art\n#anime\n#4K\n#nature\n#League of Legends"
+tagoptions="#minimalism\n#Cyberpunk 2077\n#fantasy girl\n#anime girl\n#digital art\n#anime\n#4K\n#nature\n#League of Legends"
 if [ -z $1 ]; then
   query=$(echo -e $tagoptions | dmenu -p "Search Wallhaven: " -i)
 else

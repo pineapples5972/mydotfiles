@@ -14,6 +14,7 @@ handle() {
 
 case "$1" in
     *.png|*.jpg|*.jpeg|*.mkv|*.mp4|*.m4v) mediainfo "$1";;
+    *.otf|*.ttf|*.bdf) fontpreview $1 ;;
     *.md) glow -s dark "$1";;
     *.pdf) pdftotext -l 1 -nopgbrk "$1";;
     *.zip) zipinfo "$1";;

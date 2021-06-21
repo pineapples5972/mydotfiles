@@ -1,11 +1,14 @@
 --------Browsers----------------------------------------------	;notify-send "I wish web was not bloat" &
+🏄 Nyxt		;exec nyxt ; notify-send "How was surfing! 🏄"
  Vieb		;cd $APPIMAGES_PATH && ./Vieb*
 🐱 qutebrowser	;exec qutebrowser
 🦁 brave	;exec brave ; notify-send "Browser Closed"
 🐺 LibreWolf	;cd $APPIMAGES_PATH && ./LibreWolf* ; notify-send "LibreWolf Closed"
 🌝 PaleMoon	;cd $BINARY_BUILDS_PATH/palemoon && exec ./palemoon ; notify-send "came from moon"
+😼 GnuIceCat	;cd $BINARY_BUILDS_PATH/icecat && ./icecat ; notify-send "Left the IceLand to soon?"
 🦩 minBrowser	;exec min ; notify-send "electron stopped spinning"
 🍿 FreeTube	;cd $APPIMAGES_PATH && ./freetube* ; notify-send "you exited out of doom"
+🦉 Ferdi	;cd $APPIMAGES_PATH && ./Ferdi*.AppImage ; notify-send "came out from public places"
 --------Productivity----------------------------------------------	;notify-send "That line does not meant for click" &
 🏢 Libre Office	;cd $APPIMAGES_PATH && ./LibreOffice-7.0.0-x86_64.AppImage
 🍄 Gimp		;cd $APPIMAGES_PATH && ./GIMP_AppImage-git*
@@ -30,9 +33,11 @@
 🎹 lmms		;exec $APPIMAGES_PATH/lmms.AppImage
 🎥 MovieMonad	;exec $APPIMAGES_PATH/Movie-Monad.AppImage
 〽️ Stacer	;cd $APPIMAGES_PATH && ./Stacer.AppImage
+⚛️ Elements	;cd $APPIMAGES_PATH && ./Elements.AppImage ; notify-send "Done Exploring the Universe?"
 --------Games----------------------------------------------	;notify-send "Games can be played even in the absence of Steam/Internet if one knows The Art of downloading offline games" &
 🎏 Stunt Car Remake	;cd $APPIMAGES_PATH && ./Stunt_Car*
 🧝 Eternal Lands	;cd $APPIMAGES_PATH && ./Eternal*
 🌷 Super Tux	;cd $APPIMAGES_PATH && ./SuperTux.AppImage
+☠️  Pirates of the Carribean	;cd $APPIMAGES_PATH && ./PiratasDelCaribe.AppImage ; notify-send "Welcome back to the land Captain"
 ======Add New Entry======================================	;$TERMINAL -e nvim "$HOME/.local/share/extras/scripts/appslist" ; notify-send "New Entry Loaded"
 ======Open Directory=====================================	;$TERMINAL -e vifm $APPIMAGES_PATH

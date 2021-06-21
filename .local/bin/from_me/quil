@@ -1,31 +1,52 @@
 #!/bin/sh
 
+chamber="$HOME/tent/castelobruxo/SARANG/Study/.Advanced_Studies/Library"
+
+shelfs="occult 	-Mystical
+programming 	-CS/Programming
+fictions 	-Fictions
+linguistics 	-Linguistics
+vedas 	-Mystical/Eastern/Vedas
+"
+
+
 rust() {
 	zathura /home/me/pustak/downloaded/rust.epub &
 	cd /home/me/pustak/studies/DataScience/Programming/rust && st &
 	st -e w3m https://doc.rust-lang.org/std/index.html &
-	notify-send "📖 rust study session is on" &
+	notify-send "📖 rust study session is on 🦀" &
 }
 
 bash() {
 	st -e bat ~/pustak/studies/reference/bash.md &
-	st -e bat ~/tent/hogsmead/Softwares/home/vimwiki/Everything\ Need\ to\ Know\ about\ Tmux.md &
 	cd ~/pustak/bashfu && st &
-	notify-send "📖 bash study session is on" &
+	notify-send "📖 bash study session is on 🐚" &
 }
 
 python() {
-	st -e bat ~/pustak/studies/reference/python.md &
-	st -e bat ~/pustak/studies/DataScience/Programming/python/Python_Notes_from_Voidsoul.md &
-	mpv ~/pustak/studies/DataScience/Programming/python/Python_Tutorial_For_Beginners*.mkv &
+	#st -e bat ~/pustak/studies/reference/python.md &
+	#st -e bat ~/pustak/studies/DataScience/Programming/python/Python_Notes_from_Voidsoul.md &
+	#mpv ~/pustak/studies/DataScience/Programming/python/Python_Tutorial_For_Beginners*.mkv &
 	cd ~/pustak/studies/DataScience/Programming/python/playground && st &
-	zathura ~/pustak/studies/DataScience/Programming/python/Books/PythonBasics.pdf &
-	zathura ~/pustak/studies/DataScience/Programming/python/Books/Haltermanpythonbook.pdf &
-	notify-send "📖 python learning session is on"
+	#zathura ~/pustak/studies/DataScience/Programming/python/Books/PythonBasics.pdf &
+	zathura ~/pustak/studies/DataScience/Programming/python/Books/learn-python-3-hard-way.pdf &
+	notify-send "📖Basilisk Welcomes you to the Chamber of Secrets! 🐍"
 
 }
 
-choice="rust\nbash\npython"
-selection=${1:-$(echo "$choice" | dmenu -i -p "Study of: " -l 15)}
+spanish() {
+	"$TERMINAL" -e "$EDITOR" "$NOTES_PATH"/Spanish.md &
+	"$TERMINAL" -e "$EDITOR" "$STUDIES_PATH"/Linguistics/Spanish/spanish_vocabulary &
+	notify-send "¿Cómo estás?🇪🇸"
+}
 
-$selection
+readbooks() {
+	ladder=$(echo "$shelfs" | grep -P "^$(echo "$shelfs" | grep "-" | sed 's/\t.*//g' | dmenu -i -p "📚 READING.. " | awk '{print $1}')\s" | sed 's/.*\t-//' )
+	[ -z "$ladder" ] && notify-send "Why? you feel lazy today? 🥱" && exit 0 || $TERMINAL -e vifm "$chamber"/"$ladder" &
+
+}
+
+choice="rust\nbash\npython\nspanish\nreadbooks"
+selection=${1:-$(echo "$choice" | dmenu -i -p "Study of: ")}
+
+[ -z "$selection" ] && notify-send "🥱" && exit 0 || $selection

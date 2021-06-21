@@ -1,7 +1,7 @@
 #!/bin/sh
 
 
-file="$(ls -a | fzf -m --layout=reverse-list --border --no-info --prompt=">_ " --pointer="🎃" --marker="🕸️"  --header="🍁Fuzzy Surfer"  --preview='prv {}' --height 70)"
+file="$(ls -a | fzf -m -e --cycle --layout=reverse-list --border --no-info --prompt=">_ " --pointer="🎃" --marker="🕸️"  --header="🍁Fuzzy Surfer"  --preview='prv {}' --height 70 --bind=ctrl-l:accept,ctrl-w:toggle-preview)"
 
 
 handle() {
@@ -18,12 +18,7 @@ case "$file" in
     *.png|*.jpg|*.jpeg) sxiv "$file";;
     *.md) emacs -nw "$file";;
     *.pdf) zathura "$file";;
-    *.zip) ext "$file";;
-    *.tar.gz) tar -ztvf "$file";;
-    *.tar.bz2) tar -jtvf "$file";;
-    *.tar) tar -tvf "$file";;
-    *.rar) unrar l "$file";;
-    *.7z) 7z l "$file";;
+    *.zip|*.tar|*.tar.gz|*.tar.bz2|*.rar|*.7z|*.tar.xz|*.lzma|*.bz2|*.rar|*.gz|*.Z|*.xz|*.exe) ext "$file";;
     *.html|*.xml) w3m -dump "$file";;
     .zsh*|*.bash*|*.git*) nvim "$file";;
     *.docx) libreoffice "$file";;

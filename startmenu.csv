@@ -1,0 +1,28 @@
+@search,,0,0,100,100,0,,,#ffffff,#333333,Type to search
+Internet,brave,/usr/share/icons/Papirus/22x22/apps/brave.svg
+^sep()
+Vifm,st -e vu
+File Manager,thunar
+Accessaries,^checkout(Accessaries)
+System Menu,^root(System)
+Filter,^filter(brave)
+^tag(Accessaries)
+sfds
+sfsf
+^checkout(context)
+sfsdf
+sfs
+sfsfsfsf
+
+^tag(System)
+Shutdown,instantshutdown
+Reboot
+Suspend
+Lock
+Hibernet
+Log out
+
+^tag(subcontext)
+1context
+2context
+3context
