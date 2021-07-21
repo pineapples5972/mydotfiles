@@ -1,10 +1,11 @@
-#MY DWM ARTIX RICE 
-## Based on LARBS.xyz 
-These are dotfiles that I changed/modified/added to get best of larbs.
+# Twilight Zoned RICE
 
-Music Player: Moc (Music On Console)
-visualizer: cava
-Image Viewer: Sxiv (from suckless.org)
-File Explorer = lf, vifm
-and other [larbs](https://larbs.xyz) stuff
-![imgmyartixrice](http://0x0.st/-scF.png)
+This Rice is different.
+
+- sxhkd used to replace usually dwm keybinds.
+- WMs: dwm, openbox, compiz
+- FMs: vifm, xplr, thunar
+- panels: tint2, xfce4-panel
+- custom scripts used for general tasks. check `~/.local/bin` folder
+- display manager: slim
+- autostarts: xprofile

@@ -1,0 +1,34 @@
+<menu>
+	<item type="launcher">
+		<name>Apps</name>
+		<command>/home/sar/.config/rofi/lauchers/launcher.sh</command>
+		<icon>preferences-desktop-search</icon>
+	</item>
+	<separator/>
+	<item type="launcher">
+		<name>Terminal</name>
+		<command>st</command>
+		<icon>utilities-x-terminal</icon>
+	</item>
+	<item type="launcher">
+		<name>Browser</name>
+		<command>/home/sar/Apps/dot/dot</command>
+		<icon>firefox</icon>
+	</item>
+	<item type="launcher">
+		<name>All Programs</name>
+		<command>kombini</command>
+		<icon>cbmenu</icon>
+	</item>
+	<item type="launcher">
+		<name>Explorer</name>
+		<command>st -e vu</command>
+		<icon>vifm</icon>
+	</item>
+	<separator/>
+	<item type="launcher">
+		<name>Log Out</name>
+		<command>sysact</command>
+		<icon>gnome-logout</icon>
+	</item>
+</menu>
