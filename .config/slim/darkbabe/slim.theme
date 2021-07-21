@@ -1,0 +1,47 @@
+# Batik - SLiM Theme
+# Created by owl4ce @ Sat Nov 28, 2020
+# --------------------------------------------------------------------
+# https://deviantart.com/owl4ce/art/Floflo-Batik-SLiM-Themes-861519439
+
+# Messages (ie: shutdown)
+msg_color                   #e6e6e6
+msg_font                    Sans:size=10:dpi=75
+msg_x                       91%
+msg_y                       95%
+
+# Session Name
+session_color               #e9e9ea
+session_font                Sans:size=14:bold:dpi=75
+session_x                   95%
+session_y                   98%
+session_msg                 *
+
+# valid values: stretch, tile
+background_style            stretch
+background_color            #373e4d
+
+# Input controls
+input_panel_x               50%
+input_panel_y               50%
+input_name_x                121
+input_name_y                222
+input_pass_x                121
+input_pass_y                308
+input_font                  Sans:size=14:dpi=75
+input_color                 #e6e6e6
+
+# Password feedback
+passwd_feedback_x           28%
+passwd_feedback_y           61%
+passwd_feedback_msg         Wrong Password
+passwd_feedback_capslock    Wrong Password [CL]
+
+show_username               1
+
+username_msg                
+password_msg
+
+wrong_passwd_timeout        0
+                   
+shutdown_msg                Poweroff the system ...
+reboot_msg                  Rebooting the system ...  
