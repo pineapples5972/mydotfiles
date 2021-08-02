@@ -3,9 +3,10 @@
 These are dotfiles that I changed/modified/added to get best of larbs.
 
 **Here are three branches:**
-1. master
-2. libxft-bgra-dead-zone
-3. twilight
+   1. master
+   2. libxft-bgra-dead-zone
+   3. twilight
+__________________________________
 
 1. Master: 
   - this build is years old
